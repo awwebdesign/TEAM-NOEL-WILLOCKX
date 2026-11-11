@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Contact · Team Noel-Willockx</title>
+<meta name="description" content="Neem contact op met Team Noel-Willockx: vraag een duif aan, plan een hokbezoek of zet je op de wachtlijst voor de jongen van 2027.">
+<meta name="theme-color" content="#0a1b4d">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="Team Noel-Willockx">
+<meta property="og:title" content="Contact · Team Noel-Willockx">
+<meta property="og:description" content="Neem contact op met Team Noel-Willockx: vraag een duif aan, plan een hokbezoek of zet je op de wachtlijst voor de jongen van 2027.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<script>
+/* js: scripts actief · rustig: bezoeker vraagt minder beweging (overschrijven om te testen: ?motion=1) */
+(function (d) {
+  d.classList.add('js');
+  var dwing = /[?&]motion=1/.test(location.search);
+  if (dwing) d.classList.add('beweeg');
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches && !dwing) d.classList.add('rustig');
+})(document.documentElement);
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="head" id="head">
+  <a class="brand" href="index.html" aria-label="Team Noel-Willockx, naar de homepage">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="4"/><circle class="brand-iris" cx="20" cy="20" r="6"/></svg>
+    <span class="brand-name"><small>Team</small>Noel-Willockx</span>
+  </a>
+
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a>
+    <a href="nieuws.html">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+
+  <button class="burger" id="burger" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+</header>
+
+<div class="mnav" id="mnav" hidden>
+  <nav aria-label="Mobiele navigatie">
+    <a href="index.html">Home</a>
+    <a href="nieuws.html">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <p class="mnav-foot"><span>Hokbezoek op afspraak</span><a href="tel:+32400000000">+32 400 00 00 00</a></p>
+</div>
+
+<main id="main">
+<section class="phero donker" aria-labelledby="pt">
+  <div class="phero-in">
+    <nav class="kruimel phero-top" aria-label="Kruimelpad"><a href="index.html">Home</a><span aria-current="page">Contact</span></nav>
+    <h1 class="phero-title" id="pt">Kom langs op het hok</h1>
+    <p class="phero-sub">Een duif koop je niet van een foto. Maak een afspraak, neem ze in de hand en beslis dan.</p>
+  </div>
+</section>
+
+<section class="sec contact-sec" aria-label="Contact opnemen">
+  <div class="foot-grid">
+    <div class="foot-form">
+      <h2 class="sub-title">Stuur een bericht</h2>
+      <p class="foot-intro">Stel je vraag of zeg welke duif je wil zien. We antwoorden binnen twee werkdagen.</p>
+
+      <form id="contactForm" class="form" action="contact.php" method="post" novalidate>
+        <input type="text" name="company" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="row">
+          <label class="fld"><span>Naam</span><input type="text" name="name" autocomplete="name" required></label>
+          <label class="fld"><span>E-mail</span><input type="email" name="email" autocomplete="email" required></label>
+        </div>
+        <div class="row">
+          <label class="fld"><span>Telefoon <em>(optioneel)</em></span><input type="tel" name="phone" autocomplete="tel"></label>
+          <label class="fld"><span>Waarover gaat het?</span>
+            <select name="subject" id="cSubject">
+              <option>Duif aankopen</option>
+              <option>Hokbezoek plannen</option>
+              <option>Wachtlijst jongen 2027</option>
+              <option>Andere vraag</option>
+            </select>
+          </label>
+        </div>
+        <label class="fld" id="cDuifWrap"><span>Welke duif?</span>
+          <select name="pigeon" id="cDuif"><option value="">Nog geen keuze</option></select>
+        </label>
+        <label class="fld"><span>Bericht</span><textarea name="message" rows="4" required></textarea></label>
+        <label class="consent"><input type="checkbox" name="consent" value="ja" required><span>Ik ga akkoord dat mijn gegevens gebruikt worden om mijn vraag te beantwoorden.</span></label>
+        <div class="form-end">
+          <button class="btn btn-iris" type="submit">Verstuur bericht</button>
+          <p class="form-note" id="formNote" role="status" aria-live="polite"></p>
+        </div>
+      </form>
+    </div>
+
+    <div>
+      <h2 class="sub-title">Of rechtstreeks</h2>
+      <address class="foot-info">
+        <dl>
+          <div><dt>Bel</dt><dd><a href="tel:+32400000000">+32 400 00 00 00</a></dd></div>
+          <div><dt>Mail</dt><dd><a href="mailto:info@teamnoelwillockx.be">info@teamnoelwillockx.be</a></dd></div>
+          <div><dt>Hok</dt><dd>Straat en nummer<br>Postcode Gemeente, België</dd></div>
+          <div><dt>Bezoek</dt><dd>Enkel op afspraak,<br>ook op zaterdag</dd></div>
+        </dl>
+      </address>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot donker" id="foot">
+  <div class="foot-cols">
+    <div class="foot-merk">
+      <p class="brand-name"><small>Team</small>Noel-Willockx</p>
+      <p>Reisduiven uit bewezen bloedlijnen. Snelheid, halve fond en fond.</p>
+    </div>
+
+    <nav class="foot-nav" aria-label="Voetnavigatie">
+      <a href="index.html">Home</a>
+      <a href="nieuws.html">Nieuws</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="bloedlijnen.html">Bloedlijnen</a>
+      <a href="duiven-te-koop.html">Duiven te koop</a>
+      <a href="uitslagen.html">Uitslagen</a>
+      <a href="referenties.html">Referenties</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+
+    <address class="foot-info">
+      <dl>
+        <div><dt>Bel</dt><dd><a href="tel:+32400000000">+32 400 00 00 00</a></dd></div>
+        <div><dt>Mail</dt><dd><a href="mailto:info@teamnoelwillockx.be">info@teamnoelwillockx.be</a></dd></div>
+        <div><dt>Hok</dt><dd>Straat en nummer<br>Postcode Gemeente, België</dd></div>
+        <div><dt>Bezoek</dt><dd>Enkel op afspraak, ook op zaterdag</dd></div>
+      </dl>
+    </address>
+  </div>
+
+  <div class="foot-end">
+    <span>© 2026 Team Noel-Willockx</span>
+    <span class="demo">Demo-ontwerp: namen, ringnummers, prijzen en uitslagen zijn voorbeeldinhoud.</span>
+    <a href="#head">Terug naar boven</a>
+  </div>
+</footer>
+
+<script defer src="data.js"></script>
+<script defer src="style.js"></script>
+</body>
+</html>

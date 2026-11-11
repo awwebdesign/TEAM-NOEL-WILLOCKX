@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meetpagina: mobiele weergave</title>
+<style>html, body { margin: 0; background: #999; } iframe { border: 0; width: 375px; height: 812px; display: block; background: #fff; } pre { margin: 0; font: 11px monospace; white-space: pre-wrap; }</style>
+</head>
+<body>
+<!-- Hulppagina voor tests/site.test.mjs: laadt de site in een iframe van
+     375 × 812 px (telefoon) en meet of iets buiten het scherm steekt.
+     Kies de pagina met ?pagina=uitslagen.html (standaard index.html).
+     Handig om te kijken: ?pagina=nieuws.html&y=600  of  ?pagina=duiven-te-koop.html&open=mistral -->
+<iframe id="f" title="Site op telefoonbreedte"></iframe>
+<pre id="uit"></pre>
+<script>
+var PAGINA = (new URLSearchParams(location.search).get("pagina") || "index.html").replace(/[^a-z0-9.?=&-]/gi, "");
+document.getElementById("f").addEventListener("load", function () {
+  var uit = document.getElementById('uit');
+  var q = new URLSearchParams(location.search);
+  setTimeout(function () {
+    try {
+      var w = document.getElementById('f').contentWindow, d = w.document;
+      var zicht = function (sel) { var e = d.querySelector(sel); return !!e && w.getComputedStyle(e).display !== 'none'; };
+      // bewust afgesneden of zelf scrollend: telt niet als overloop
+      var mag = '.lat-scroll, .ticker, .hero, .vis, .thuis, .hp, .sr, .skip, .mnav, dialog';
+      var buiten = [].slice.call(d.querySelectorAll('body *')).filter(function (e) {
+        if (e.closest(mag)) return false;
+        var r = e.getBoundingClientRect();
+        return r.width > 0 && (r.right > w.innerWidth + 1 || r.left < -1);
+      }).slice(0, 10).map(function (e) { return e.tagName.toLowerCase() + '.' + (e.className.baseVal !== undefined ? e.className.baseVal : e.className); });
+      var klein = [].slice.call(d.querySelectorAll('a.btn, button.btn, .burger, .chip, .seg span, .lijn-plus, select')).filter(function (e) {
+        var r = e.getBoundingClientRect(); return r.width > 0 && r.height < 40;
+      }).map(function (e) { return e.tagName.toLowerCase() + '.' + e.className + ' ' + Math.round(e.getBoundingClientRect().height) + 'px'; });
+      uit.textContent = JSON.stringify({
+        innerWidth: w.innerWidth, scrollWidth: d.documentElement.scrollWidth, buiten: buiten, teKlein: klein,
+        navZichtbaar: zicht('.nav'), burgerZichtbaar: zicht('.burger'),
+        formulier: q.get('formulier') && d.getElementById('contactForm') ? {
+          onderwerp: d.getElementById('cSubject').value, duif: d.getElementById('cDuif').value,
+          bericht: d.getElementById('contactForm').elements.message.value
+        } : undefined
+      });
+      if (q.get('open')) { var k = d.querySelector('[data-open="' + q.get('open') + '"]'); if (k) k.click(); }
+      if (q.get('menu')) d.querySelector('#burger').click();
+      if (q.get('naar')) { var el = d.getElementById(q.get('naar')); if (el) w.scrollTo(0, el.getBoundingClientRect().top + w.pageYOffset - 60 + (+q.get('plus') || 0)); }
+      if (q.get('y')) w.scrollTo(0, +q.get('y'));
+    } catch (e) { uit.textContent = JSON.stringify({ fout: String(e) }); }
+  }, 1500);
+});
+document.getElementById('f').src = '../' + PAGINA;
+</script>
+</body>
+</html>

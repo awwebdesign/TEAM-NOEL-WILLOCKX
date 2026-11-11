@@ -1,0 +1,25 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "noel-willockx",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5173"
+      ],
+      "port": 5173
+    },
+    {
+      "name": "noel-willockx-5174",
+      "runtimeExecutable": "python",
+      "runtimeArgs": [
+        "-m",
+        "http.server",
+        "5174"
+      ],
+      "port": 5174
+    }
+  ]
+}

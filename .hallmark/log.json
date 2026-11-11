@@ -1,0 +1,34 @@
+[
+ {
+  "mode": "redesign",
+  "depth": "full",
+  "scope": "site",
+  "shape": "Thuisvlucht",
+  "theme": "custom",
+  "axes": "dark/display-condensed/cool",
+  "hero": "lucht boven, kop in kapitalen als dak waar de duiven op landen",
+  "nav": "merk links, acht links, kilometerteller",
+  "footer": "merk, links en adres boven het landingswoord Thuis",
+  "imagery": "none (schemas van eigen gegevens)",
+  "photos": [],
+  "entry": "lossing in de kop",
+  "fingerprint": "dark/display-condensed/cool/poster-type/canvas-flock/data-diagrams",
+  "sections": [
+   "kop",
+   "prijzenrij",
+   "twee namen",
+   "aanbod",
+   "lijnen",
+   "uitslagen",
+   "logboek",
+   "uitnodiging",
+   "voet"
+  ],
+  "signature": "de witte vlucht die achter de letters vliegt en op de koppen landt",
+  "waived": [
+   "8"
+  ],
+  "prompt": "reisduivenhok dat duiven verkoopt, met bloedlijnen en uitslagen",
+  "date": "2026-11-11"
+ }
+]

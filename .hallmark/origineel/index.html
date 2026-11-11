@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Team Noel-Willockx · Reisduiven te koop, bloedlijnen en uitslagen</title>
+<meta name="description" content="Team Noel-Willockx kweekt en speelt reisduiven op snelheid, halve fond en fond. Bekijk de duiven te koop, onze bloedlijnen en de uitslagen van dit seizoen.">
+<meta name="theme-color" content="#121a23">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="Team Noel-Willockx">
+<meta property="og:title" content="Team Noel-Willockx · Gekweekt om thuis te komen">
+<meta property="og:description" content="Team Noel-Willockx kweekt en speelt reisduiven op snelheid, halve fond en fond. Bekijk de duiven te koop, onze bloedlijnen en de uitslagen van dit seizoen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<script>
+/* js: scripts actief · rustig: bezoeker vraagt minder beweging (overschrijven om te testen: ?motion=1) */
+(function (d) {
+  d.classList.add('js');
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches && !/[?&]motion=1/.test(location.search)) d.classList.add('rustig');
+})(document.documentElement);
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="head" id="head">
+  <a class="brand" href="index.html" aria-label="Team Noel-Willockx, naar de homepage">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="4"/><circle class="brand-iris" cx="20" cy="20" r="6"/></svg>
+    <span class="brand-name"><small>Team</small>Noel-Willockx</span>
+  </a>
+
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="nieuws.html">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <p class="hud" id="hud" aria-hidden="true">
+    <span class="hud-dot"></span>
+    <span class="hud-km" id="hudKm">462 km</span>
+    <span class="hud-lbl" id="hudLbl">tot thuis</span>
+  </p>
+
+  <button class="burger" id="burger" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+</header>
+
+<div class="mnav" id="mnav" hidden>
+  <nav aria-label="Mobiele navigatie">
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="nieuws.html">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="mnav-foot mono">Hokbezoek op afspraak · <a href="tel:+32400000000">+32 400 00 00 00</a></p>
+</div>
+
+<main id="main">
+<!-- ============================ HERO ============================ -->
+<section class="hero" aria-label="Team Noel-Willockx">
+  <canvas class="flock" id="flock" aria-hidden="true"></canvas>
+
+  <div class="hero-in">
+    <p class="hero-log mono"><span>Lossing Bourges</span><span>07:15</span><span>462 km</span><span>wind ZW 2 Bft</span>
+      <button type="button" class="vlucht-knop" id="vluchtKnop" aria-pressed="false" hidden><i aria-hidden="true"></i><b>Pauzeer vlucht</b></button></p>
+    <h1 class="hero-title">
+      <span class="hl"><span class="hl-in">Gekweekt</span></span>
+      <span class="hl"><span class="hl-in">om <em>thuis</em></span></span>
+      <span class="hl"><span class="hl-in">te komen.</span></span>
+    </h1>
+    <div class="hero-side">
+      <p>Team Noel-Willockx kweekt en speelt reisduiven op snelheid, halve fond en fond. Elke duif die we aanbieden komt uit ouders die het in de mand al bewezen hebben.</p>
+      <div class="hero-cta">
+        <a class="btn btn-ink" href="duiven-te-koop.html">Bekijk duiven te koop</a>
+        <a class="btn btn-line" href="bloedlijnen.html">Ontdek de bloedlijnen</a>
+      </div>
+    </div>
+  </div>
+
+  <svg class="roofline" viewBox="0 0 1440 170" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path d="M0 170V128c22-16 52-18 74-6 14-24 60-30 84-4l34 6v-22l30-20 30 20v24h40v-30h16V70l9-44 9 44v26h36v30l60 4c16-18 44-22 62-6 10-20 46-26 66-2l70 4c30-10 60-8 84 2l56-2v-52h16v-12l282-16v80h30V34h5v4l13 5-13 5v78c26-18 60-20 86-6 22-22 62-22 82 0l44 6v44Z"/>
+    <g class="roof-birds"><ellipse cx="912" cy="55" rx="7" ry="4.2"/><circle cx="917" cy="50.5" r="2.8"/><ellipse cx="968" cy="52" rx="7" ry="4.2"/><circle cx="963" cy="47.5" r="2.8"/><ellipse cx="986" cy="51" rx="7" ry="4.2"/><circle cx="991" cy="46.5" r="2.8"/><ellipse cx="1090" cy="45" rx="7" ry="4.2"/><circle cx="1095" cy="40.5" r="2.8"/></g>
+  </svg>
+</section>
+
+<div class="ticker" aria-label="Recente topuitslagen">
+  <div class="ticker-track" id="ticker">
+    <span><b>1e</b> Prov. Bourges <i>4 812 duiven</i></span>
+    <span><b>1e</b> Prov. Melun <i>3 204 duiven</i></span>
+    <span><b>7e</b> Nat. Châteauroux <i>12 406 duiven</i></span>
+    <span><b>1e</b> Noyon <i>1 942 duiven</i></span>
+    <span><b>3e</b> Prov. Limoges <i>2 416 duiven</i></span>
+    <span><b>4e</b> Nat. Zone Bourges <i>6 118 duiven</i></span>
+    <span><b>1e</b> Quiévrain <i>1 506 duiven</i></span>
+  </div>
+</div>
+
+<!-- ============================ OVER ONS (kort) ============================ -->
+<section class="sec wie" aria-labelledby="wie-t">
+  <div>
+    <p class="kicker mono">Over ons</p>
+    <h2 id="wie-t" class="sec-title">Twee namen,<br>één hok.</h2>
+  </div>
+  <div class="wie-txt" data-reveal>
+    <p>Wat begon als twee liefhebbers met elk een eigen kolonie, is vandaag één team met één doel: duiven kweken die vroeg vallen, week na week.</p>
+    <a class="more" href="over-ons.html">Maak kennis met het team</a>
+  </div>
+</section>
+
+<!-- ============================ DUIVEN TE KOOP (nieuwste) ============================ -->
+<section class="sec koop" aria-labelledby="koop-t">
+  <header class="sec-head sec-head-rij">
+    <div>
+      <p class="kicker mono">Duiven te koop</p>
+      <h2 id="koop-t" class="sec-title">Nieuw in het aanbod</h2>
+    </div>
+    <a class="more" href="duiven-te-koop.html">Alle duiven te koop</a>
+  </header>
+  <div class="duiven" id="uitgelicht" data-max="4"></div>
+</section>
+
+<!-- ============================ BLOEDLIJNEN (kort) ============================ -->
+<section class="sec lijnen" aria-labelledby="lijnen-t">
+  <header class="sec-head sec-head-rij">
+    <div>
+      <p class="kicker mono">Bloedlijnen</p>
+      <h2 id="lijnen-t" class="sec-title">Vier lijnen, bewezen in de mand</h2>
+    </div>
+    <a class="more" href="bloedlijnen.html">Alle bloedlijnen</a>
+  </header>
+  <div class="lijn-list" id="lijnKort"></div>
+</section>
+
+<!-- ============================ UITSLAGEN (laatste vluchten) ============================ -->
+<section class="sec uitslagen donker" aria-labelledby="uit-t">
+  <header class="sec-head sec-head-rij">
+    <div>
+      <p class="kicker mono">Uitslagen</p>
+      <h2 id="uit-t" class="sec-title">De klok liegt niet</h2>
+    </div>
+    <a class="more" href="uitslagen.html">Alle uitslagen</a>
+  </header>
+  <div class="board">
+    <div class="board-wrap">
+      <table class="res">
+        <caption class="sr">Uitslagen per vlucht</caption>
+        <thead>
+          <tr><th scope="col">Datum</th><th scope="col">Vlucht</th><th scope="col" class="num">Afstand</th><th scope="col">Niveau</th><th scope="col" class="num">Duiven</th><th scope="col">Onze prijzen</th></tr>
+        </thead>
+        <tbody id="resBody" data-max="5"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ NIEUWS (laatste berichten) ============================ -->
+<section class="sec nieuws" aria-labelledby="nieuws-t">
+  <header class="sec-head sec-head-rij">
+    <div>
+      <p class="kicker mono">Nieuws</p>
+      <h2 id="nieuws-t" class="sec-title">Vers van het hok</h2>
+    </div>
+    <a class="more" href="nieuws.html">Al het nieuws</a>
+  </header>
+  <div class="news" id="nieuwsKort"></div>
+</section>
+
+<section class="cta donker" aria-labelledby="cta-t">
+  <div>
+    <h2 id="cta-t" class="sec-title">Een duif koop je niet van een foto</h2>
+    <p>Maak een afspraak, neem ze in de hand en beslis dan. Hokbezoek kan elke dag, ook op zaterdag.</p>
+  </div>
+  <a class="btn btn-iris" href="contact.html?onderwerp=bezoek">Plan een hokbezoek</a>
+</section>
+
+</main>
+
+<footer class="foot donker" id="foot">
+  <div class="foot-cols">
+    <div class="foot-merk">
+      <p class="brand-name"><small>Team</small>Noel-Willockx</p>
+      <p>Reisduiven uit bewezen bloedlijnen. Snelheid, halve fond en fond.</p>
+    </div>
+
+    <nav class="foot-nav" aria-label="Voetnavigatie">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="nieuws.html">Nieuws</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="bloedlijnen.html">Bloedlijnen</a>
+      <a href="duiven-te-koop.html">Duiven te koop</a>
+      <a href="uitslagen.html">Uitslagen</a>
+      <a href="referenties.html">Referenties</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <address class="foot-info">
+      <dl>
+        <div><dt class="mono">Bel</dt><dd><a href="tel:+32400000000">+32 400 00 00 00</a></dd></div>
+        <div><dt class="mono">Mail</dt><dd><a href="mailto:info@teamnoelwillockx.be">info@teamnoelwillockx.be</a></dd></div>
+        <div><dt class="mono">Hok</dt><dd>Straat en nummer<br>Postcode Gemeente, België</dd></div>
+        <div><dt class="mono">Bezoek</dt><dd>Enkel op afspraak, ook op zaterdag</dd></div>
+      </dl>
+    </address>
+  </div>
+
+  <p class="thuis" aria-hidden="true"><span id="thuisWord">Thuis.</span><small class="mono" id="thuisKlok">Geklokt om 12:42:11 · 1 412 m/min</small></p>
+
+  <div class="foot-end">
+    <span>© 2026 Team Noel-Willockx</span>
+    <span class="demo">Demo-ontwerp: namen, ringnummers, prijzen en uitslagen zijn voorbeeldinhoud.</span>
+    <a href="#head">Terug naar boven</a>
+  </div>
+</footer>
+
+<!-- detailvenster van een duif (inhoud komt uit data.js) -->
+<dialog class="dlg" id="dlg" aria-labelledby="dlgNaam">
+  <button class="dlg-x" type="button" id="dlgX" aria-label="Sluiten"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5l14 14M19 5 5 19" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linecap="round"/></svg></button>
+  <div class="dlg-in" id="dlgIn" data-lenis-prevent></div>
+</dialog>
+
+<script defer src="vendor/gsap.min.js"></script>
+<script defer src="vendor/ScrollTrigger.min.js"></script>
+<script defer src="vendor/lenis.min.js"></script>
+<script defer src="data.js"></script>
+<script defer src="style.js"></script>
+</body>
+</html>

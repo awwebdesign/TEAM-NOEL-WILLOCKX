@@ -1,0 +1,10 @@
+{
+  "name": "team-noel-willockx",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Website Team Noel-Willockx (statische site: index.html, style.css, style.js, data.js)",
+  "scripts": {
+    "start": "python -m http.server 5173",
+    "test": "node --test tests/site.test.mjs"
+  }
+}

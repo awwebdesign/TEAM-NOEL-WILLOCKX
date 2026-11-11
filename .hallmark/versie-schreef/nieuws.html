@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Nieuws · Team Noel-Willockx</title>
+<meta name="description" content="Nieuws van het hok van Team Noel-Willockx: de winterkweek, nieuwe duiven in de verkoop en de belangrijkste uitslagen van het seizoen.">
+<meta name="theme-color" content="#0a1b4d">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="nl_BE">
+<meta property="og:site_name" content="Team Noel-Willockx">
+<meta property="og:title" content="Nieuws van het hok · Team Noel-Willockx">
+<meta property="og:description" content="Nieuws van het hok van Team Noel-Willockx: de winterkweek, nieuwe duiven in de verkoop en de belangrijkste uitslagen van het seizoen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Hanken+Grotesk:wght@400;600&display=swap">
+<link rel="stylesheet" href="style.css">
+
+<script>
+/* js: scripts actief · rustig: bezoeker vraagt minder beweging (overschrijven om te testen: ?motion=1) */
+(function (d) {
+  d.classList.add('js');
+  var dwing = /[?&]motion=1/.test(location.search);
+  if (dwing) d.classList.add('beweeg');
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches && !dwing) d.classList.add('rustig');
+})(document.documentElement);
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Naar inhoud</a>
+
+<header class="head" id="head">
+  <a class="brand" href="index.html" aria-label="Team Noel-Willockx, naar de homepage">
+    <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="15" fill="none" stroke="currentColor" stroke-width="4"/><circle class="brand-iris" cx="20" cy="20" r="6"/></svg>
+    <span class="brand-name"><small>Team</small>Noel-Willockx</span>
+  </a>
+
+  <nav class="nav" aria-label="Hoofdnavigatie">
+    <a href="index.html">Home</a>
+    <a href="nieuws.html" aria-current="page">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <button class="burger" id="burger" type="button" aria-label="Menu openen" aria-expanded="false" aria-controls="mnav"><i></i><i></i></button>
+</header>
+
+<div class="mnav" id="mnav" hidden>
+  <nav aria-label="Mobiele navigatie">
+    <a href="index.html">Home</a>
+    <a href="nieuws.html" aria-current="page">Nieuws</a>
+    <a href="over-ons.html">Over ons</a>
+    <a href="bloedlijnen.html">Bloedlijnen</a>
+    <a href="duiven-te-koop.html">Duiven te koop</a>
+    <a href="uitslagen.html">Uitslagen</a>
+    <a href="referenties.html">Referenties</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <p class="mnav-foot"><span>Hokbezoek op afspraak</span><a href="tel:+32400000000">+32 400 00 00 00</a></p>
+</div>
+
+<main id="main">
+<section class="phero donker" aria-labelledby="pt">
+  <div class="phero-in">
+    <nav class="kruimel phero-top" aria-label="Kruimelpad"><a href="index.html">Home</a><span aria-current="page">Nieuws</span></nav>
+    <h1 class="phero-title" id="pt">Vers van het hok</h1>
+    <p class="phero-sub">Kweek, vluchten en verkoop: wat er de voorbije weken op en rond het hok gebeurde.</p>
+  </div>
+</section>
+
+<section class="sec" aria-label="Berichten">
+  <div class="artikels" id="nieuwsAlle"></div>
+</section>
+
+<section class="cta donker" aria-labelledby="cta-t">
+  <h2 id="cta-t" class="sec-title">Een duif koop je niet van een foto</h2>
+  <div class="cta-zij">
+    <p>Maak een afspraak, neem ze in de hand en beslis dan. Hokbezoek kan elke dag, ook op zaterdag.</p>
+    <a class="btn btn-iris" href="contact.html?onderwerp=bezoek">Plan een hokbezoek</a>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot donker" id="foot">
+  <div class="foot-cols">
+    <div class="foot-merk">
+      <p class="brand-name"><small>Team</small>Noel-Willockx</p>
+      <p>Reisduiven uit bewezen bloedlijnen. Snelheid, halve fond en fond.</p>
+    </div>
+
+    <nav class="foot-nav" aria-label="Voetnavigatie">
+      <a href="index.html">Home</a>
+      <a href="nieuws.html" aria-current="page">Nieuws</a>
+      <a href="over-ons.html">Over ons</a>
+      <a href="bloedlijnen.html">Bloedlijnen</a>
+      <a href="duiven-te-koop.html">Duiven te koop</a>
+      <a href="uitslagen.html">Uitslagen</a>
+      <a href="referenties.html">Referenties</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <address class="foot-info">
+      <dl>
+        <div><dt>Bel</dt><dd><a href="tel:+32400000000">+32 400 00 00 00</a></dd></div>
+        <div><dt>Mail</dt><dd><a href="mailto:info@teamnoelwillockx.be">info@teamnoelwillockx.be</a></dd></div>
+        <div><dt>Hok</dt><dd>Straat en nummer<br>Postcode Gemeente, België</dd></div>
+        <div><dt>Bezoek</dt><dd>Enkel op afspraak, ook op zaterdag</dd></div>
+      </dl>
+    </address>
+  </div>
+
+  <div class="foot-end">
+    <span>© 2026 Team Noel-Willockx</span>
+    <span class="demo">Demo-ontwerp: namen, ringnummers, prijzen en uitslagen zijn voorbeeldinhoud.</span>
+    <a href="#head">Terug naar boven</a>
+  </div>
+</footer>
+
+<script defer src="data.js"></script>
+<script defer src="style.js"></script>
+</body>
+</html>
